@@ -1,18 +1,30 @@
 import { Link } from 'react-router';
-import Profile from '../components/profile';
+import Profile from '../../components/profile';
 
-export default function Sidebar() {
+interface Props {
+  isOpen: boolean;
+  toggleOpen: () => void;
+}
+
+export default function Sidebar({ isOpen, toggleOpen }: Props) {
   return (
     <div>
-      <aside className="fixed h-full w-60 top-0 z-40 bg-[#e65242]">
+      <aside
+        className={
+          `fixed h-full w-64 top-0 z-40 transition-all duration-200 bg-[#e65242] ` +
+          (isOpen ? `left-0` : `-left-48`)
+        }
+      >
         <div className="mx-6 my-6">
           <div className="flex w-full justify-between items-center">
             <Profile />
+            {}
             <svg
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 stroke-slate-100"
+              className="h-6 stroke-slate-100 hover:cursor-pointer"
+              onClick={toggleOpen}
             >
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g
@@ -45,19 +57,19 @@ export default function Sidebar() {
           <ul>
             <Link
               to={'/'}
-              className="sidebar-item flex text-white items-center w-full p-2 my-2 rounded hover:bg-[#f37b6e] cursor-pointer"
+              className="sidebar-item flex text-white items-center w-full p-2 my-2 hover:bg-[#f37b6e] cursor-pointer"
             >
               <span className="mx-6 font-semibold">Home</span>
             </Link>
             <Link
               to={'/projects'}
-              className="sidebar-item flex items-center text-white w-full p-2 my-2 rounded hover:bg-gray-700 cursor-pointer"
+              className="sidebar-item flex items-center text-white w-full p-2 my-2 hover:bg-[#f37b6e] cursor-pointer"
             >
               <span className="mx-6 font-semibold">Projects</span>
             </Link>
             <Link
               to={'/'}
-              className="sidebar-item flex items-center text-white w-full p-2 my-2 rounded hover:bg-gray-700 cursor-pointer"
+              className="sidebar-item flex items-center text-white w-full p-2 my-2 hover:bg-[#f37b6e] cursor-pointer"
             >
               <span className="mx-6 font-semibold">Resume</span>
             </Link>
