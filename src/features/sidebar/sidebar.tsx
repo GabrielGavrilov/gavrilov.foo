@@ -11,7 +11,7 @@ export default function Sidebar({ isOpen, toggleOpen }: Props) {
     <div>
       <aside
         className={
-          `fixed h-full w-64 top-0 z-40 transition-all duration-200 bg-[#e65242] ` +
+          `fixed h-full w-64 top-0 z-40 transition-all duration-200 bg-[#212121] ` +
           (isOpen ? `left-0` : `-left-48`)
         }
       >
@@ -57,19 +57,19 @@ export default function Sidebar({ isOpen, toggleOpen }: Props) {
           <ul>
             <Link
               to={'/'}
-              className="sidebar-item flex text-white items-center w-full p-2 my-2 hover:bg-[#f37b6e] cursor-pointer"
+              className="sidebar-item flex text-white items-center w-full p-2 my-2 hover:bg-slate-50 hover:text-[#212121] cursor-pointer"
             >
               <span className="mx-6 font-semibold">Home</span>
             </Link>
             <Link
               to={'/projects'}
-              className="sidebar-item flex items-center text-white w-full p-2 my-2 hover:bg-[#f37b6e] cursor-pointer"
+              className="sidebar-item flex items-center text-white w-full p-2 my-2 hover:bg-slate-50 hover:text-[#212121] cursor-pointer"
             >
               <span className="mx-6 font-semibold">Projects</span>
             </Link>
             <Link
               to={'/'}
-              className="sidebar-item flex items-center text-white w-full p-2 my-2 hover:bg-[#f37b6e] cursor-pointer"
+              className="sidebar-item flex items-center text-white w-full p-2 my-2 hover:bg-slate-50 hover:text-[#212121] cursor-pointer"
             >
               <span className="mx-6 font-semibold">Resume</span>
             </Link>
