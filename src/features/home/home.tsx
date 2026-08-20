@@ -2,7 +2,7 @@ import Profile from '../../components/profile';
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex items-center justify-center bg-slate-50">
+    <div className="w-full min-h-screen h-full flex items-center justify-center">
       <div className="flex flex-col items-center justify-center">
         <Profile large={true} />
         <h2 className="text-3xl mt-6 mb-1 font-semibold">Gabriel Gavrilov</h2>
