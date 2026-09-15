@@ -6,7 +6,7 @@ import kumi from '../../assets/kumi.png';
 export default function Projects() {
   return (
     <div className="w-full h-full flex justify-center">
-      <div className="w-8/12 p-6 grid grid-cols-3 gap-3">
+      <div className="w-9/12 p-6 grid gap-6 lg:grid-cols-3 md:grid-cols-1">
         <ProjectCard
           banner={kumi}
           title="Kumi"

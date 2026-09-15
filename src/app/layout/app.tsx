@@ -1,9 +1,15 @@
 import { Outlet } from 'react-router';
 import Sidebar from '../../features/sidebar/sidebar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function App() {
   const [isOpen, setIsOpen] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (window.innerWidth < 1024) {
+      setIsOpen(false);
+    }
+  }, []);
 
   return (
     <main>
