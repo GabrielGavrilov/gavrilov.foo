@@ -1,6 +1,8 @@
 import { Link } from 'react-router';
 import Profile from '../../components/profile';
 
+import Resume from '../../assets/resume.pdf';
+
 interface Props {
   isOpen: boolean;
   toggleOpen: () => void;
@@ -67,12 +69,13 @@ export default function Sidebar({ isOpen, toggleOpen }: Props) {
             >
               <span className="mx-6 font-semibold">Projects</span>
             </Link>
-            <Link
-              to={'/'}
+            <a
+              href={Resume}
+              target="_blank"
               className="sidebar-item flex items-center text-white w-full p-2 my-2 hover:bg-slate-50 hover:text-[#212121] cursor-pointer"
             >
               <span className="mx-6 font-semibold">Resume</span>
-            </Link>
+            </a>
           </ul>
         </div>
       </aside>
