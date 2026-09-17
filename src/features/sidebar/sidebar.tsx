@@ -1,6 +1,5 @@
 import { Link } from 'react-router';
 import Profile from '../../components/profile';
-
 import Resume from '../../assets/resume.pdf';
 
 interface Props {
