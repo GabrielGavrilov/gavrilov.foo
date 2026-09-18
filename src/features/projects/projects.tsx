@@ -12,7 +12,7 @@ export default function Projects() {
           <ProjectCard
             banner={kumi}
             title="Kumi"
-            description="An AI agent orchestration platform with custom tool calling capabilities through the use of HTTP"
+            description="A Copilot-like AI agent orchestration platform with custom tool calling capabilities through the use of HTTP"
             languages="C#,.NET,TypeScript,React"
             url="https://github.com/GabrielGavrilov/Kumi"
           />
