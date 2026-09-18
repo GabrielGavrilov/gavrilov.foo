@@ -6,7 +6,7 @@ export default function App() {
   const [isOpen, setIsOpen] = useState<boolean>(true);
 
   useEffect(() => {
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth <= 1550) {
       setIsOpen(false);
     }
   }, []);
