@@ -26,7 +26,7 @@ export default function Projects() {
           <ProjectCard
             banner={mocha}
             title="Mocha"
-            description="A light-weight opinionated microservice framework built from scratch using TCP with custom dependency maanagement"
+            description="A light-weight opinionated microservice framework built from scratch using TCP with a custom dependency management system"
             languages="Java"
             url="https://github.com/GabrielGavrilov/mocha"
           />
