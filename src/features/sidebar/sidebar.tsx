@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import Profile from '../../components/profile';
-import Resume from '../../assets/resume.pdf';
+import Resume from '../../assets/Software Developer Resume - Gabriel Gavrilov.pdf';
 
 interface Props {
   isOpen: boolean;
